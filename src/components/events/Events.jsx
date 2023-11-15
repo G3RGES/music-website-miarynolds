@@ -13,7 +13,7 @@ const Events = async () => {
     <section className="section" id="tours">
       <div className="container mx-auto">
         {/* event box */}
-        <EventBox />
+        <EventBox events={events} />
       </div>
     </section>
   );
