@@ -6,6 +6,7 @@ import React from "react";
 import { RiMapPin2Fill } from "react-icons/ri";
 
 import { motion } from "framer-motion";
+import { fadeIn } from "../../../variants";
 
 const EventBox = ({ events }) => {
   //   console.log(events); // TESTING
