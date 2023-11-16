@@ -50,7 +50,16 @@ const Hero = () => {
               factorY={0.4}
               className="relative "
             >
-              <div className="w-[300px] h-[101.37px] xl:w-[725px] xl:h-[244.97px]  ">
+              <motion.div
+                variants={fadeIn("up", 0.4)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{
+                  once: false,
+                  amount: 0.3,
+                }}
+                className="w-[300px] h-[101.37px] xl:w-[725px] xl:h-[244.97px]  "
+              >
                 <Image
                   src={"/assets/hero/typo-1.svg"}
                   alt=""
@@ -58,7 +67,7 @@ const Hero = () => {
                   priority
                   className="object-contain"
                 />
-              </div>
+              </motion.div>
             </MouseParallaxChild>
           </MouseParallaxContainer>
         </div>
