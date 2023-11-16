@@ -69,10 +69,112 @@ const Hero = () => {
                 />
               </motion.div>
             </MouseParallaxChild>
+            <MouseParallaxChild
+              factorX={0.9}
+              factorY={0.9}
+              className="absolute xl:left-6 z-30  "
+            >
+              <motion.div
+                variants={fadeIn("up", 0.7)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{
+                  once: false,
+                  amount: 0.3,
+                }}
+                className="w-[300px] h-[101.37px] xl:w-[625px] xl:h-[244.97px]  "
+              >
+                <Image
+                  src={"/assets/hero/typo-2.svg"}
+                  alt=""
+                  fill
+                  priority
+                  className="object-contain"
+                />
+              </motion.div>
+            </MouseParallaxChild>
+            <MouseParallaxChild
+              factorX={0.3}
+              factorY={0.6}
+              className="hidden xl:flex absolute right-0 z-20 opacity-80  "
+            >
+              <motion.div
+                variants={fadeIn("left", 1.4)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{
+                  once: false,
+                  amount: 0.3,
+                }}
+                className="w-[150px] h-[100px] xl:w-[248px] xl:h-[200px] mix-blend-luminosity  "
+              >
+                <Image
+                  src={"/assets/hero/bird.png"}
+                  alt=""
+                  fill
+                  priority
+                  className="object-contain"
+                />
+              </motion.div>
+            </MouseParallaxChild>
           </MouseParallaxContainer>
+
+          <motion.div
+            variants={fadeIn("up", 1)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{
+              once: false,
+              amount: 0.7,
+            }}
+            className="min-h-[60px] flex items-center mb-6 text-[26px] "
+          >
+            <div className="hidden xl:flex justify-center items-center xl:gap-x-0">
+              <div>World</div>
+              <div className="relative w-2 h-2 mx-2 flex items-center justify-center  ">
+                <Image src={"/assets/hero/dot.svg"} alt="" fill />
+              </div>
+              <div>Tour</div>
+              <div className="relative w-2 h-2 mx-2 flex items-center justify-center  ">
+                <Image src={"/assets/hero/dot.svg"} alt="" fill />
+              </div>
+              <div>2023</div>
+            </div>
+            {/* icon */}
+            <div className="hidden xl:flex items-center justify-center relative w-7 h-7 mx-4">
+              <Image src={"/assets/hero/mic.svg"} alt="mic_img" fill />
+            </div>
+            {/* tour & location */}
+            <TypeAnimation
+              sequence={locationSequence}
+              wrapper="div"
+              speed={10}
+              deletionSpeed={10}
+              repeat={Infinity}
+              cursor={false}
+            />
+          </motion.div>
+          <motion.div
+            variants={fadeIn("up", 1.4)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{
+              once: false,
+              amount: 0.7,
+            }}
+          >
+            <button className="btn btn-lg btn-accent">Get Tickets</button>
+          </motion.div>
         </div>
         {/* image */}
-        <div
+        <motion.div
+          variants={fadeIn("left", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{
+            once: false,
+            amount: 0.6,
+          }}
           className="hidden xl:flex absolute right-0 top-0 before:w-[784px] before:h-[893px]
         before:absolute before:right-0 before:top-0 before:bg-singerOverlay before:z-10 "
         >
@@ -84,7 +186,7 @@ const Hero = () => {
             quality={100}
             priority
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );
