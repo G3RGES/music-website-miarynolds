@@ -11,6 +11,7 @@ import { fadeIn } from "../../variants";
 // components
 import NavMobile from "./NavMobile";
 import Nav from "./Nav";
+import MenuBtn from "./MenuBtn";
 
 const Header = () => {
   const [active, setActive] = useState(false);
@@ -32,8 +33,8 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed z-50 w-full ${
-        active ? "bg-[#030315] py-6" : "bg-transparent py-8"
+      className={`fixed z-50 w-full transition-all ${
+        active ? "bg-[#030315] py-6 " : "bg-transparent py-8 "
       }`}
     >
       <div
@@ -53,11 +54,13 @@ const Header = () => {
           />
         </Link>
         {/* nav */}
-        <Nav />
+        <Nav containerStyles="hidden xl:flex items-center gap-x-8 " />
         {/* nav mobile */}
         <NavMobile />
         {/* menu btn */}
-        <div>menu btn</div>
+        <div className="absolute right-7 bg-red-700 top-9 z-10 xl:hidden  ">
+          <MenuBtn />
+        </div>
         {/* socials */}
         <div>social icons</div>
       </div>
