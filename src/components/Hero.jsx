@@ -155,12 +155,12 @@ const Hero = () => {
             />
           </motion.div>
           <motion.div
-            variants={fadeIn("up", 1.4)}
+            variants={fadeIn("up", 1.3)}
             initial="hidden"
             whileInView={"show"}
             viewport={{
               once: false,
-              amount: 0.7,
+              amount: 0.5,
             }}
           >
             <button className="btn btn-lg btn-accent">Get Tickets</button>
@@ -173,7 +173,7 @@ const Hero = () => {
           whileInView={"show"}
           viewport={{
             once: false,
-            amount: 0.6,
+            amount: 0.4,
           }}
           className="hidden xl:flex absolute right-0 top-0 before:w-[784px] before:h-[893px]
         before:absolute before:right-0 before:top-0 before:bg-singerOverlay before:z-10 "
