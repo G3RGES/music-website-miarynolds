@@ -10,6 +10,7 @@ import { fadeIn } from "../../variants";
 
 // components
 import NavMobile from "./NavMobile";
+import Nav from "./Nav";
 
 const Header = () => {
   const [active, setActive] = useState(false);
@@ -52,7 +53,7 @@ const Header = () => {
           />
         </Link>
         {/* nav */}
-        <nav>nav</nav>
+        <Nav />
         {/* nav mobile */}
         <NavMobile />
         {/* menu btn */}
