@@ -1,6 +1,6 @@
 import React from "react";
 
-const Nav = ({ container }) => {
+const Nav = ({ containerStyles, linkStyles }) => {
   return <nav className="hidden xl:flex">Nav</nav>;
 };
 
