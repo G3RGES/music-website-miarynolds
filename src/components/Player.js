@@ -2,13 +2,12 @@
 
 import React from "react";
 
-import { images } from "next.config";
-
 import { AudioPlayer } from "react-audio-play";
 
 import { motion } from "framer-motion";
 
 import { fadeIn } from "../../variants";
+import Image from "next/image";
 
 const Player = () => {
   return (
@@ -23,7 +22,20 @@ const Player = () => {
         >
           {/* text & avatar image */}
           <div className="hidden w-[300px] xl:flex items-center gap-x-4 ">
-            text & avatar image
+            {/* avatr */}
+            <div className="relative w-16 h-16 ">
+              <Image
+                src={"/assets/player/avatar.png"}
+                fill
+                alt="avatar_img"
+                priority
+              />
+            </div>
+            {/* text */}
+            <div className="leading-none ">
+              <div className="text-lg font-medium ">Mia Reynolds</div>
+              <div className="text-sm font-light ">Freedom</div>
+            </div>
           </div>
           {/* player */}
           <div className="w-full max-w-4xl ">
