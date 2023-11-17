@@ -12,6 +12,7 @@ import { fadeIn } from "../../variants";
 import NavMobile from "./NavMobile";
 import Nav from "./Nav";
 import MenuBtn from "./MenuBtn";
+import Socials from "./Socials";
 
 const Header = () => {
   const [active, setActive] = useState(false);
@@ -62,7 +63,9 @@ const Header = () => {
           <MenuBtn />
         </div>
         {/* socials */}
-        <div>social icons</div>
+        <div>
+          <Socials />
+        </div>
       </div>
     </header>
   );
