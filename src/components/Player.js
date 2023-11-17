@@ -12,7 +12,14 @@ import Image from "next/image";
 const Player = () => {
   return (
     <>
-      <div
+      <motion.div
+        variants={fadeIn("up", 1.3)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{
+          once: false,
+          amount: 0.7,
+        }}
         className="bg-gradient-to-r from-tertiary/70
        to-primary/10 backdrop-blur-[15px] h-[112px] flex items-center relative z-40 "
       >
@@ -54,7 +61,7 @@ const Player = () => {
             />
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
