@@ -58,7 +58,7 @@ const Header = () => {
         {/* nav mobile */}
         <NavMobile />
         {/* menu btn */}
-        <div className="absolute right-7 bg-red-700 top-9 z-10 xl:hidden  ">
+        <div className="absolute right-7 top-9 z-10 xl:hidden">
           <MenuBtn />
         </div>
         {/* socials */}
