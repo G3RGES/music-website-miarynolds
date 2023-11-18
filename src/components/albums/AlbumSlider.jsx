@@ -10,6 +10,10 @@ import { AudioPlayer } from "react-audio-play";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, FreeMode, Navigation, Thumbs } from "swiper/modules";
 
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+
 const AlbumSlider = () => {
   return <div>AlbumSlider</div>;
 };
