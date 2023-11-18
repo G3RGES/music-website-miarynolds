@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-scroll";
 
+import { useMediaQuery } from "react-responsive";
+
 const Links = [
   {
     path: "home",
@@ -21,6 +23,11 @@ const Links = [
 ];
 
 const Nav = ({ containerStyles, linkStyles }) => {
+  const isDesktop = useMediaQuery({
+    query: "(min-width:1310px)",
+  });
+  // console.log(isDesktop); // Testing
+
   return (
     <nav className={`${containerStyles}`}>
       {Links.map((link, idx) => {
@@ -29,7 +36,7 @@ const Nav = ({ containerStyles, linkStyles }) => {
             key={idx}
             to={link.path}
             className={`${linkStyles} cursor-pointer border-b-2 border-transparent`}
-            smooth
+            smooth={!isDesktop ? false : true}
             spy
             offset={-50}
             activeClass="active"
