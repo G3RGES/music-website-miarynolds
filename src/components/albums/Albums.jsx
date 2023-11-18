@@ -14,6 +14,10 @@ const Albums = () => {
     <section id="discography">
       <div className="container mx-auto">
         <SectionHeader pretitle="Discography" title="Popular Albums" />
+        {/* album slider */}
+        <div>
+          <AlbumSlider />
+        </div>
       </div>
     </section>
   );
