@@ -9,8 +9,35 @@ import {
   RiSoundcloudFill,
 } from "react-icons/ri";
 
-const Socials = () => {
-  return <div>Socials</div>;
+const socials = [
+  {
+    path: "#",
+    icon: <RiYoutubeFill />,
+  },
+  {
+    path: "#",
+    icon: <RiInstagramFill />,
+  },
+  {
+    path: "#",
+    icon: <RiSpotifyFill />,
+  },
+  {
+    path: "#",
+    icon: <RiSoundcloudFill />,
+  },
+];
+
+const Socials = ({ containerStyles, iconStyles }) => {
+  return (
+    <div className={`${containerStyles}`}>
+      {socials.map((social, idx) => (
+        <Link href={social.path} key={idx}>
+          <div className={`${iconStyles}`}>{social.icon}</div>
+        </Link>
+      ))}
+    </div>
+  );
 };
 
 export default Socials;
