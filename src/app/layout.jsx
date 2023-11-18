@@ -4,6 +4,8 @@ import "./globals.css";
 // components
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+
+// context provider
 import NavContextProvider from "@/context/NavContext";
 
 const alexBrush = Alex_Brush({
