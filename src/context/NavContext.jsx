@@ -1,9 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { createContext, useState } from "react";
 
-const NavContext = () => {
+export const NavContext = createContext();
+
+const NavContextProvider = () => {
   return <div>NavContext</div>;
 };
 
-export default NavContext;
+export default NavContextProvider;
