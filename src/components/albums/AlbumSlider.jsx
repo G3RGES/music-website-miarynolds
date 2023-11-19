@@ -55,7 +55,10 @@ const AlbumSlider = () => {
                   <div className="flex-1 flex flex-col xl:px-12  ">
                     {album.tracks?.map((track, idx) => {
                       return (
-                        <div key={idx}>
+                        <div
+                          className="flex flex-1 w-full h-[500px] "
+                          key={idx}
+                        >
                           {/* track name */}
                           <div
                             className="flex flex-1 items-center gap-x-2 capitalize 
@@ -64,7 +67,9 @@ const AlbumSlider = () => {
                             <div className="text-accent text-sm xl:text-lg">
                               0{idx + 1}.
                             </div>
-                            <div>{track.name}</div>
+                            <div className="text-sm xl:text-base  ">
+                              {track.name}
+                            </div>
                           </div>
                           {/* player */}
                           <div>
