@@ -56,7 +56,7 @@ const AlbumSlider = () => {
                     {album.tracks?.map((track, idx) => {
                       return (
                         <div
-                          className="flex flex-1 w-full h-[500px] "
+                          className="flex flex-1 w-full h-[500px]  "
                           key={idx}
                         >
                           {/* track name */}
