@@ -167,7 +167,8 @@ const AlbumSlider = () => {
                   fill
                   priority
                   alt="thumb_img"
-                  className="object-contain"
+                  className="object-contain group-hover:scale-105 
+                  transition-all duration-300"
                 />
               </div>
             </SwiperSlide>
