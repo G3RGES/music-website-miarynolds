@@ -32,9 +32,15 @@ const AlbumSlider = () => {
           // console.log(album); //Testing
           return (
             <SwiperSlide key={album.id} className="mb-12">
-              <div>
+              <div
+                className="w-full bg-secondary/80 rounded-[10px] flex flex-col 
+              xl:flex-row items-center p-6 xl:p-12 gap-x-12  "
+              >
                 {/* image */}
-                <div className="hidden xl:flex w-[300px] h-[300px] xl:w-[500px] xl:h-[500px] ">
+                <div
+                  className="hidden xl:flex w-[300px] h-[300px] xl:w-[500px] xl:h-[500px]
+                relative cursor-pointer rounded-[10px] overflow-hidden  "
+                >
                   <Image
                     src={album.img}
                     alt="album_img"
@@ -44,7 +50,45 @@ const AlbumSlider = () => {
                   />
                 </div>
                 {/* track container */}
-                <div>track container</div>
+                <div className="flex flex-1 w-full h-[500px]  ">
+                  {/* tracks */}
+                  <div className="flex-1 flex flex-col xl:px-12  ">
+                    {album.tracks?.map((track, idx) => {
+                      return (
+                        <div key={idx}>
+                          {/* track name */}
+                          <div
+                            className="flex flex-1 items-center gap-x-2 capitalize 
+                          font-semibold xl:font-extrabold  "
+                          >
+                            <div className="text-accent text-sm xl:text-lg">
+                              0{idx + 1}.
+                            </div>
+                            <div>{track.name}</div>
+                          </div>
+                          {/* player */}
+                          <div>
+                            <AudioPlayer
+                              style={{
+                                background: "transparent",
+                                boxShadow: "none",
+                                width: "100%",
+                              }}
+                              width="100%"
+                              src={track.src}
+                              loop
+                              preload="none"
+                              color="#fff"
+                              volume={40}
+                              volumePlacement="bottom"
+                              className="album-player"
+                            />
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
             </SwiperSlide>
           );
