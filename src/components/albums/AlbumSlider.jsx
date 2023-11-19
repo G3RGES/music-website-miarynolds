@@ -13,13 +13,15 @@ import { EffectCoverflow, FreeMode, Navigation, Thumbs } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
+import Nav from "../Nav";
 
 // fetcher
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 const AlbumSlider = () => {
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const { data, error } = useSWR("http://localhost:4000/albums", fetcher);
-  console.log(data);
+  // console.log(data);//testing
 
   if (error) return "Failed to fetch data";
   if (!data) return "Loading...";
@@ -27,7 +29,22 @@ const AlbumSlider = () => {
   return (
     <>
       {/* top slider */}
-      <Swiper>
+      <Swiper
+        effect={"coverflow"}
+        speed={1000}
+        spaceBetween={80}
+        allowTouchMove={false}
+        thumbs={{ swiper: thumbsSwiper }}
+        modules={[FreeMode, Navigation, Thumbs, EffectCoverflow]}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
+        className="album-slider"
+      >
         {data.map((album) => {
           // console.log(album); //Testing
           return (
