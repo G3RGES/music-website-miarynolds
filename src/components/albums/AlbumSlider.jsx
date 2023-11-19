@@ -144,12 +144,24 @@ const AlbumSlider = () => {
           },
         }}
         modules={[FreeMode, Navigation, Thumbs]}
+        spaceBetween={20}
+        slidesPerView={5}
+        freeMode={true}
+        watchSlidesProgress={true}
+        className="thumb-slider"
       >
         {data?.map((thumb, idx) => {
           return (
-            <SwiperSlide key={idx}>
+            <SwiperSlide
+              key={idx}
+              className="relative group overflow-hidden border-2 border-transparent 
+              w-[254px] rounded-[10px]  "
+            >
               {/* img */}
-              <div className="relative w-[195px] h-[195px] ">
+              <div
+                className="relative w-[195px] h-[195px] sm:w-[360px] sm:h-[360px] md:w-[240px]
+              md:max-h-[240px] cursor-pointer  "
+              >
                 <Image
                   src={thumb.img}
                   fill
