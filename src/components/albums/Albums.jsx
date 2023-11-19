@@ -16,7 +16,7 @@ const Albums = () => {
         <SectionHeader pretitle="Discography" title="Popular Albums" />
         {/* album slider */}
         <motion.div
-          variants={fadeIn("up", 0.2)}
+          variants={fadeIn("up", 0.4)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.3 }}
