@@ -11,6 +11,11 @@ import { fadeIn } from "../../../variants";
 
 const PostList = ({ posts }) => {
   // console.log(posts); //testing
+
+  // get first three posts
+  const firstThreePosts = posts.slice(0, 3);
+  // console.log(firstThreePosts); //testing
+
   return <div>PostList</div>;
 };
 
