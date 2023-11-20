@@ -12,32 +12,69 @@ import { fadeIn } from "../../variants";
 
 const Footer = () => {
   return (
-    <footer className="bg-accent section">
+    <footer className="bg-accent section h-[500px] xl:h-auto ">
       <div
-        className="container mx-auto px-4 py-16 flex flex-col items-center justify-center
-      gap-y-8"
+        className="container h-full mx-auto px-4 py-16 flex flex-col items-center justify-center
+      gap-y-8 "
       >
         {/* email link */}
-        <div>
+        <motion.div
+          variants={fadeIn("up", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.3 }}
+        >
           <Link href="#">
-            <h2>hello@miareynolds.com</h2>
+            <h2 className="text-[24px] lg:text-[38px] font-semibold leading-tight ">
+              hello@miareynolds.com
+            </h2>
           </Link>
-        </div>
+        </motion.div>
         {/* nav */}
-        <div>
+        <motion.div
+          variants={fadeIn("up", 0.4)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.3 }}
+        >
           <Nav
             containerStyles="flex flex-col xl:flex-row justify-center items-center gap-y-4
             xl:gap-x-8 text-sm uppercase font-semibold"
             linkStyles="hover:text-primary/80 transition-all"
           />
-        </div>
+        </motion.div>
         {/* socials */}
-        <div>
+        <motion.div
+          variants={fadeIn("up", 0.6)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.3 }}
+        >
           <Socials
             containerStyles="flex text-[24px] gap-x-8"
             iconStyles="hover:text-primary/80 transition-all justify-center items-center"
           />
-        </div>
+        </motion.div>
+        {/* logo */}
+        <motion.div
+          variants={fadeIn("up", 0.8)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.1 }}
+        >
+          <Link
+            href="#"
+            className="relative w-[250px] h-[50px] flex transition-all  "
+          >
+            <Image
+              src={"/assets/header/logo.svg"}
+              alt="logo"
+              fill
+              priority
+              className="object-contain"
+            />
+          </Link>
+        </motion.div>
       </div>
     </footer>
   );
