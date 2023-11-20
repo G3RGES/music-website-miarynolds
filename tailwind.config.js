@@ -20,8 +20,8 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        singerOverlay: "url(/public/assets/hero/singer-overlay.png)",
-        newsletter: "url(/public/assets/newsletter/bg.png)",
+        singerOverlay: "url(/assets/hero/singer-overlay.png)",
+        newsletter: "url(/assets/newsletter/bg.png)",
       },
       fontFamily: {
         alexBrush: [`var(--font-alexBrush)`, "sans-serif"],
