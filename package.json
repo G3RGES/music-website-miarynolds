@@ -19,7 +19,7 @@
     "react-responsive": "^9.0.2",
     "react-scroll": "^1.9.0",
     "react-type-animation": "^3.2.0",
-    "swiper": "^11.0.4",
+    "swiper": "^12.1.2",
     "swr": "^2.2.4",
     "tailwind-scrollbar": "^3.0.5"
   },
